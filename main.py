@@ -83,7 +83,7 @@ def decryptFinish(charArray, key):
     return convertedString
 
 def printmenu():
-    print("1. Zakoduj wiadomosc\n2. Odkoduj wiadomosc")
+    print("1. Zaszyfruj wiadomosc\n2. Odszyfruj wiadomosc")
 
 def inputMyCoded():
     codedWord = []
@@ -110,7 +110,7 @@ def menu():
         except ValueError:
             print("Klucz musi byc liczba calkowita")
             quit()
-        text = input("Podaj slowo do zakodowania\n")
+        text = input("Podaj slowo do zaszyfrowania\n")
         textToConvert = list(text)
         print(textToConvert)
         print(addKey(convert(textToConvert), key))
@@ -125,7 +125,7 @@ def menu():
         except ValueError:
             print("Klucz musi byc liczba calkowita")
             quit()
-        print("Podaj zakodowane slowo liczba po liczbie, wpisz pojedyncze zero kiedy chcesz skonczyc wpisywanie\n")
+        print("Podaj zaszyfrowane slowo liczba po liczbie, wpisz pojedyncze zero kiedy chcesz skonczyc wpisywanie\n")
         text = inputMyCoded()
         print(chr(27) + "[2J")
         print(decrypt(text, key))
